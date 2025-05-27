@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frank Ayuoyi | Personal Webpage</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #0056b3;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #007bff;
+      color: white;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Frank Ayuoyi</h1>
+    <p>Web Developer & Designer | Game Creator | Tech Enthusiast</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <section id="about" class="card">
+      <h2 id="name">Click to see my real name</h2>
+      <p id="description">I design, develop and dream in code. I love building games and interactive apps.</p>
+      <button onclick="showName()">Reveal Name</button>
+    </section>
+
+    <section id="gallery" class="card">
+      <h2>My Gallery</h2>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/300x200?text=Game+1" alt="Game 1">
+        <img src="https://via.placeholder.com/300x200?text=Game+2" alt="Game 2">
+        <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1">
+        <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2">
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact Me</h2>
+      <form onsubmit="event.preventDefault(); alert('Message sent!')">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Connect with me:</p>
+    <div class="social-links">
+      <a href="https://facebook.com/" target="_blank">Facebook</a>
+      <a href="https://twitter.com/" target="_blank">Twitter</a>
+      <a href="https://github.com/" target="_blank">GitHub</a>
+    </div>
+    <p>&copy; 2025 Frank Hotaru. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showName() {
+      document.getElementById('name').innerText = "Frank Hotaru";
+    }
+  </script>
+
+</body>
+</html>
